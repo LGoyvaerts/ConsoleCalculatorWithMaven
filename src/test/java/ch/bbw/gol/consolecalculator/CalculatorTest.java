@@ -140,47 +140,47 @@ public class CalculatorTest {
     //Multiplication
     @Test
     public void testMultiplicationZweiPositiveIsOk() {
-        assertTrue(calculator.multiplication(2, 3) == 6);
+        assertTrue(calculator.multiplicationTesting(2, 3) == 6);
     }
 
     @Test
     public void testMultiplicationZweiNegativeIsOk() {
-        assertTrue(calculator.multiplication((-3), (-3)) == 9);
+        assertTrue(calculator.multiplicationTesting((-3), (-3)) == 9);
     }
 
     @Test
     public void testMultiplicationPosTimesNegIsOk() {
-        assertTrue(calculator.multiplication(1, (-2)) == (-2));
+        assertTrue(calculator.multiplicationTesting(1, (-2)) == (-2));
     }
 
     @Test
     public void testMultiplicationNegTimesPosIsOk() {
-        assertTrue(calculator.multiplication((-2), 1) == (-2));
+        assertTrue(calculator.multiplicationTesting((-2), 1) == (-2));
     }
 
     @Test
     public void testMultiplicationPosTimesZeroIsOk() {
-        assertTrue(calculator.multiplication(4, 0) == 0);
+        assertTrue(calculator.multiplicationTesting(4, 0) == 0);
     }
 
     @Test
     public void testMultiplicationZeroTimesZeroIsOk() {
-        assertTrue(calculator.multiplication(0, 0) == 0);
+        assertTrue(calculator.multiplicationTesting(0, 0) == 0);
     }
 
     @Test
     public void testMultiplicationMaxTimesMaxIsOk() {
-        assertTrue(calculator.multiplication(Integer.MAX_VALUE, Integer.MAX_VALUE) == 1);
+        assertTrue(calculator.multiplicationTesting(Integer.MAX_VALUE, Integer.MAX_VALUE) == 1);
     }
 
     @Test
     public void testMultiplicationMinTimesMinIsOk() {
-        assertTrue(calculator.multiplication(Integer.MIN_VALUE, Integer.MIN_VALUE) == 0);
+        assertTrue(calculator.multiplicationTesting(Integer.MIN_VALUE, Integer.MIN_VALUE) == 0);
     }
 
     @Test(expected = NumberFormatException.class)
     public void testMultiplicationPosTimesStringIsOk() {
-        assertTrue(calculator.multiplication(10, Integer.parseInt("CRASH")) == 1234);
+        assertTrue(calculator.multiplicationTesting(10, Integer.parseInt("CRASH")) == 1234);
     }
 
     //Unexpected Exceptions
@@ -201,6 +201,6 @@ public class CalculatorTest {
 
     @Test
     public void testMultiplikationOneNotNormal() throws NumberFormatException {
-        assertTrue(calculator.multiplication(3, 3) == 9);
+        assertTrue(calculator.multiplicationTesting(3, 3) == 9);
     }
 }

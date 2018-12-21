@@ -6,15 +6,19 @@ public class Calculator {
         return summand1 + summand2;
     }
 
-    public int subtraktion(int value1, int value2) {
+    protected int subtraktion(int value1, int value2) {
         return value1 - value2;
     }
 
-    public double division(int dividend, int divisor) {
+    double division(int dividend, int divisor) {
         return dividend / divisor;
     }
 
-    public int multiplication(int multiplikant, int multiplikator) {
+    private int multiplication(int multiplikant, int multiplikator) {
         return multiplikant * multiplikator;
+    }
+
+    public int multiplicationTesting(int multiplikant, int multiplikator){
+        return multiplication(multiplikant, multiplikator);
     }
 }
