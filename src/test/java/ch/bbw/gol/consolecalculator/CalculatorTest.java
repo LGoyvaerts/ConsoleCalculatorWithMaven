@@ -96,9 +96,15 @@ public class CalculatorTest {
         assertTrue(calculator.subtraktion((-Integer.MIN_VALUE), Integer.MAX_VALUE) == 1);
     }
 
+    //Division
     @Test
     public void testDivisionZweiPositiveIsOk() {
         assertTrue(calculator.division(6, 2) == 3);
+    }
+
+    @Test
+    public void testDivisionZweiNegativeIsOk() {
+        assertTrue(calculator.division((-5), (-5)) == 1);
     }
 
     @Test
