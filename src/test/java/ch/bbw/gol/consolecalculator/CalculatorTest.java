@@ -127,6 +127,11 @@ public class CalculatorTest {
         assertTrue(calculator.division(Integer.MAX_VALUE, 12) == 178956970);
     }
 
+    @Test(expected = NumberFormatException.class)
+    public void testDivisionMaxDivByStringIsOk() {
+        assertTrue(calculator.division(Integer.MAX_VALUE, Integer.parseInt("CRASH")) == 1234);
+    }
+
     @Test
     public void testMultiplicationZweiPositiveIsOk() {
         assertTrue(calculator.multiplication(2, 3) == 6);
