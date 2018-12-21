@@ -133,6 +133,11 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testDivistionPosByPosRoundingIsOk() {
+        assertTrue(calculator.division(1, 2) == 0);
+    }
+
+    @Test
     public void testMultiplicationZweiPositiveIsOk() {
         assertTrue(calculator.multiplication(2, 3) == 6);
     }
