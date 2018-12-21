@@ -193,4 +193,9 @@ public class CalculatorTest {
     public void testSubtraktionOneNotNormal() throws NumberFormatException {
         assertTrue(calculator.subtraktion(4, 2) == 2);
     }
+
+    @Test
+    public void testDivisionOneNotNormal() throws NumberFormatException {
+        assertTrue(calculator.division(4, 4) == 1);
+    }
 }
