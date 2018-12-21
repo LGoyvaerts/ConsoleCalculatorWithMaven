@@ -147,4 +147,9 @@ public class CalculatorTest {
     public void testMultiplicationZweiNegativeIsOk() {
         assertTrue(calculator.multiplication((-3), (-3)) == 9);
     }
+
+    @Test
+    public void testMultiplicationPosTimesZeroIsOk() {
+        assertTrue(calculator.multiplication(4, 0) == 0);
+    }
 }
