@@ -113,6 +113,11 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testDivisionZeroDivByPosIsOk() {
+        assertTrue(calculator.division(0, 10) == 0);
+    }
+
+    @Test
     public void testMultiplicationZweiPositiveIsOk() {
         assertTrue(calculator.multiplication(2, 3) == 6);
     }
