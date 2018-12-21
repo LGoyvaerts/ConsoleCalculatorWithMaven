@@ -154,7 +154,12 @@ public class CalculatorTest {
     }
 
     @Test
-    public void testMultiplivationZeroTimesZeroIsOk() {
+    public void testMultiplicationZeroTimesZeroIsOk() {
         assertTrue(calculator.multiplication(0, 0) == 0);
+    }
+
+    @Test
+    public void testMultiplicationMaxTimesMaxIsOk() {
+        assertTrue(calculator.multiplication(Integer.MAX_VALUE, Integer.MAX_VALUE) == 1);
     }
 }
