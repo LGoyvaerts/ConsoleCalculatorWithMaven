@@ -9,8 +9,14 @@ public class CalculatorTest {
     Calculator calculator;
 
     @Test
-    public void testSummeZeiPositiveIsOk() {
+    public void testSummeZweiPositiveIsOk() {
         calculator = new Calculator();
         assertTrue(calculator.addition(10, 25) == 35);
+    }
+
+    @Test
+    public void testSubtraktionZweiPositiveIsOk() {
+        calculator = new Calculator();
+        assertTrue(calculator.subtraktion(25, 10) == 15);
     }
 }
