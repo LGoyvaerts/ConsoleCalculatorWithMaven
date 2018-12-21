@@ -96,9 +96,45 @@ public class CalculatorTest {
         assertTrue(calculator.subtraktion((-Integer.MIN_VALUE), Integer.MAX_VALUE) == 1);
     }
 
+    //Division
     @Test
     public void testDivisionZweiPositiveIsOk() {
         assertTrue(calculator.division(6, 2) == 3);
+    }
+
+    @Test
+    public void testDivisionZweiNegativeIsOk() {
+        assertTrue(calculator.division((-5), (-5)) == 1);
+    }
+
+    @Test(expected = ArithmeticException.class)
+    public void testDivisionPosDivByZeroIsOk() {
+        assertTrue(calculator.division(10, 0) == 0);
+    }
+
+    @Test
+    public void testDivisionZeroDivByPosIsOk() {
+        assertTrue(calculator.division(0, 10) == 0);
+    }
+
+    @Test
+    public void testDivisionMaxDivByMinIsOk() {
+        assertTrue(calculator.division(Integer.MAX_VALUE, Integer.MIN_VALUE) == 0);
+    }
+
+    @Test
+    public void testDivistionMaxDivByPosIsOk() {
+        assertTrue(calculator.division(Integer.MAX_VALUE, 12) == 178956970);
+    }
+
+    @Test(expected = NumberFormatException.class)
+    public void testDivisionMaxDivByStringIsOk() {
+        assertTrue(calculator.division(Integer.MAX_VALUE, Integer.parseInt("CRASH")) == 1234);
+    }
+
+    @Test
+    public void testDivistionPosByPosRoundingIsOk() {
+        assertTrue(calculator.division(1, 2) == 0);
     }
 
     @Test
