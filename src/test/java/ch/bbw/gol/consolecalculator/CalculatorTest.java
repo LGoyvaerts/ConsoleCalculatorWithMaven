@@ -152,4 +152,9 @@ public class CalculatorTest {
     public void testMultiplicationPosTimesZeroIsOk() {
         assertTrue(calculator.multiplication(4, 0) == 0);
     }
+
+    @Test
+    public void testMultiplivationZeroTimesZeroIsOk() {
+        assertTrue(calculator.multiplication(0, 0) == 0);
+    }
 }
