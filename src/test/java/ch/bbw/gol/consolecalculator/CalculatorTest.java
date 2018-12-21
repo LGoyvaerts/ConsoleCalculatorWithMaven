@@ -26,6 +26,11 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testsummePosNegIsOk() {
+        assertTrue(calculator.addition(5, (-10)) == (-5));
+    }
+
+    @Test
     public void testSummeNegPosIsOk() {
         assertTrue(calculator.addition((-10), 5) == (-5));
     }
