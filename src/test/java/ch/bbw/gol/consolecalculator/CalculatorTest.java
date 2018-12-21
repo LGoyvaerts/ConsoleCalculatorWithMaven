@@ -25,4 +25,10 @@ public class CalculatorTest {
         calculator = new Calculator();
         assertTrue(calculator.division(6, 2) == 3);
     }
+
+    @Test
+    public void testMultiplicationZweiPositiveIsOk(){
+        calculator = new Calculator();
+        assertTrue(calculator.multiplication(2, 3) == 6);
+    }
 }
