@@ -36,8 +36,12 @@ public class CalculatorTest {
     }
 
     @Test
-    public void testSummeMaxPlusOneIsOk(){
+    public void testSummeMaxPlusOneIsOk() {
         assertTrue(calculator.addition(Integer.MAX_VALUE, 1) == Integer.MIN_VALUE);
+    }
+
+    public void testSummeMixMinusOneIsOk() {
+        assertTrue(calculator.addition(Integer.MIN_VALUE, (-1)) == Integer.MAX_VALUE);
     }
 
     @Test
