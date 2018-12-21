@@ -46,18 +46,24 @@ public class CalculatorTest {
     }
 
     @Test
-    public void testSummeMaxPlusMinIsOk(){
-        assertTrue(calculator.addition(Integer.MAX_VALUE, Integer.MIN_VALUE)== (-1));
+    public void testSummeMaxPlusMinIsOk() {
+        assertTrue(calculator.addition(Integer.MAX_VALUE, Integer.MIN_VALUE) == (-1));
     }
 
     @Test
-    public void testSummeMaxPlusMinusMinIsOk(){
-        assertTrue(calculator.addition(Integer.MAX_VALUE, (-Integer.MIN_VALUE))== (-1));
+    public void testSummeMaxPlusMinusMinIsOk() {
+        assertTrue(calculator.addition(Integer.MAX_VALUE, (-Integer.MIN_VALUE)) == (-1));
     }
 
+    //Subtraction
     @Test
     public void testSubtraktionZweiPositiveIsOk() {
         assertTrue(calculator.subtraktion(25, 10) == 15);
+    }
+
+    @Test
+    public void testSubtraktionZweiNegativeIsOk() {
+        assertTrue(calculator.subtraktion((-5), (-5)) == 0);
     }
 
     @Test
