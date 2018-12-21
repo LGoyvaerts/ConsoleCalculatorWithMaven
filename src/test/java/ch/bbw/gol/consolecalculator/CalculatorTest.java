@@ -107,6 +107,11 @@ public class CalculatorTest {
         assertTrue(calculator.division((-5), (-5)) == 1);
     }
 
+    @Test(expected = ArithmeticException.class)
+    public void testDivisionPosDivByZeroIsOk() {
+        assertTrue(calculator.division(10, 0) == 0);
+    }
+
     @Test
     public void testMultiplicationZweiPositiveIsOk() {
         assertTrue(calculator.multiplication(2, 3) == 6);
