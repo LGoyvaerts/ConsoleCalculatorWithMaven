@@ -149,6 +149,11 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testMultiplicationPosTimesNegIsOk() {
+        assertTrue(calculator.multiplication(1, (-2)) == (-2));
+    }
+
+    @Test
     public void testMultiplicationPosTimesZeroIsOk() {
         assertTrue(calculator.multiplication(4, 0) == 0);
     }
