@@ -14,9 +14,45 @@ public class CalculatorTest {
         calculator = new Calculator();
     }
 
+    //Addition
     @Test
     public void testSummeZweiPositiveIsOk() {
         assertTrue(calculator.addition(10, 25) == 35);
+    }
+
+    @Test
+    public void testSummeZweiNegativeIsOk() {
+        assertTrue(calculator.addition((-10), -8) == (-18));
+    }
+
+    @Test
+    public void testsummePosNegIsOk() {
+        assertTrue(calculator.addition(5, (-10)) == (-5));
+    }
+
+    @Test
+    public void testSummeNegPosIsOk() {
+        assertTrue(calculator.addition((-10), 5) == (-5));
+    }
+
+    @Test
+    public void testSummeMaxPlusOneIsOk() {
+        assertTrue(calculator.addition(Integer.MAX_VALUE, 1) == Integer.MIN_VALUE);
+    }
+
+    @Test
+    public void testSummeMinPlusMinusOneOneIsOk() {
+        assertTrue(calculator.addition(Integer.MIN_VALUE, (-1)) == Integer.MAX_VALUE);
+    }
+
+    @Test
+    public void testSummeMaxPlusMinIsOk(){
+        assertTrue(calculator.addition(Integer.MAX_VALUE, Integer.MIN_VALUE)== (-1));
+    }
+
+    @Test
+    public void testSummeMaxPlusMinusMinIsOk(){
+        assertTrue(calculator.addition(Integer.MAX_VALUE, (-Integer.MIN_VALUE))== (-1));
     }
 
     @Test
