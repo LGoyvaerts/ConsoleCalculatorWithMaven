@@ -14,9 +14,15 @@ public class CalculatorTest {
         calculator = new Calculator();
     }
 
+    //Addition
     @Test
     public void testSummeZweiPositiveIsOk() {
         assertTrue(calculator.addition(10, 25) == 35);
+    }
+
+    @Test
+    public void testSummeZweiNegativeIsOk(){
+        assertTrue(calculator.addition((-10), -8)==(-18));
     }
 
     @Test
