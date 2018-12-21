@@ -182,4 +182,10 @@ public class CalculatorTest {
     public void testMultiplicationPosTimesStringIsOk() {
         assertTrue(calculator.multiplication(10, Integer.parseInt("CRASH")) == 1234);
     }
+
+    //Unexpected Exceptions
+    @Test
+    public void testAdditionOneNotNormal() throws NumberFormatException {
+        assertTrue(calculator.addition(2, 4) == 6);
+    }
 }
