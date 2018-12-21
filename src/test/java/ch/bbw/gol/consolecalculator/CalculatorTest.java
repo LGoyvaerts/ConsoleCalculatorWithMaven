@@ -41,7 +41,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void testSummeMixMinusOneIsOk() {
+    public void testSummeMinPlusMinusOneOneIsOk() {
         assertTrue(calculator.addition(Integer.MIN_VALUE, (-1)) == Integer.MAX_VALUE);
     }
 
