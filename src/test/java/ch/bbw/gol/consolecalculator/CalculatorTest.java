@@ -123,6 +123,11 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testDivistionMaxDivByPosIsOk() {
+        assertTrue(calculator.division(Integer.MAX_VALUE, 12) == 178956970);
+    }
+
+    @Test
     public void testMultiplicationZweiPositiveIsOk() {
         assertTrue(calculator.multiplication(2, 3) == 6);
     }
