@@ -137,8 +137,14 @@ public class CalculatorTest {
         assertTrue(calculator.division(1, 2) == 0);
     }
 
+    //Multiplication
     @Test
     public void testMultiplicationZweiPositiveIsOk() {
         assertTrue(calculator.multiplication(2, 3) == 6);
+    }
+
+    @Test
+    public void testMultiplicationZweiNegativeIsOk() {
+        assertTrue(calculator.multiplication((-3), (-3)) == 9);
     }
 }
