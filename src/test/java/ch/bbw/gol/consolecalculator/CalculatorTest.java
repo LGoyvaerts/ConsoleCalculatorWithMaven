@@ -118,6 +118,11 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testDivisionMaxDivByMinIsOk() {
+        assertTrue(calculator.division(Integer.MAX_VALUE, Integer.MIN_VALUE) == 0);
+    }
+
+    @Test
     public void testMultiplicationZweiPositiveIsOk() {
         assertTrue(calculator.multiplication(2, 3) == 6);
     }
