@@ -188,4 +188,9 @@ public class CalculatorTest {
     public void testAdditionOneNotNormal() throws NumberFormatException {
         assertTrue(calculator.addition(2, 4) == 6);
     }
+
+    @Test
+    public void testSubtraktionOneNotNormal() throws NumberFormatException {
+        assertTrue(calculator.subtraktion(4, 2) == 2);
+    }
 }
