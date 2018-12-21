@@ -162,4 +162,9 @@ public class CalculatorTest {
     public void testMultiplicationMaxTimesMaxIsOk() {
         assertTrue(calculator.multiplication(Integer.MAX_VALUE, Integer.MAX_VALUE) == 1);
     }
+
+    @Test
+    public void testMultiplicationMinTimesMinIsOk() {
+        assertTrue(calculator.multiplication(Integer.MIN_VALUE, Integer.MIN_VALUE) == 0);
+    }
 }
