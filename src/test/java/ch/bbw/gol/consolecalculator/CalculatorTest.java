@@ -1,5 +1,6 @@
 package ch.bbw.gol.consolecalculator;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
@@ -8,27 +9,28 @@ public class CalculatorTest {
 
     Calculator calculator;
 
+    @Before
+    public void setUp() {
+        calculator = new Calculator();
+    }
+
     @Test
     public void testSummeZweiPositiveIsOk() {
-        calculator = new Calculator();
         assertTrue(calculator.addition(10, 25) == 35);
     }
 
     @Test
     public void testSubtraktionZweiPositiveIsOk() {
-        calculator = new Calculator();
         assertTrue(calculator.subtraktion(25, 10) == 15);
     }
 
     @Test
     public void testDivisionZweiPositiveIsOk() {
-        calculator = new Calculator();
         assertTrue(calculator.division(6, 2) == 3);
     }
 
     @Test
-    public void testMultiplicationZweiPositiveIsOk(){
-        calculator = new Calculator();
+    public void testMultiplicationZweiPositiveIsOk() {
         assertTrue(calculator.multiplication(2, 3) == 6);
     }
 }
