@@ -167,4 +167,9 @@ public class CalculatorTest {
     public void testMultiplicationMinTimesMinIsOk() {
         assertTrue(calculator.multiplication(Integer.MIN_VALUE, Integer.MIN_VALUE) == 0);
     }
+
+    @Test(expected = NumberFormatException.class)
+    public void testMultiplicationPosTimesStringIsOk() {
+        assertTrue(calculator.multiplication(10, Integer.parseInt("CRASH")) == 1234);
+    }
 }
