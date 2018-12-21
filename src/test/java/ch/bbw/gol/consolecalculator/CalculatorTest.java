@@ -72,6 +72,11 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testSubtraktionNegPosIsOk() {
+        assertTrue(calculator.subtraktion((-5), 5) == (-10));
+    }
+
+    @Test
     public void testDivisionZweiPositiveIsOk() {
         assertTrue(calculator.division(6, 2) == 3);
     }
