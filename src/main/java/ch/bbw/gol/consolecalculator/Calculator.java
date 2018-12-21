@@ -14,7 +14,11 @@ public class Calculator {
         return dividend / divisor;
     }
 
-    public int multiplication(int multiplikant, int multiplikator) {
+    private int multiplication(int multiplikant, int multiplikator) {
         return multiplikant * multiplikator;
+    }
+
+    public int multiplicationTesting(int multiplikant, int multiplikator){
+        return multiplication(multiplikant, multiplikator);
     }
 }
