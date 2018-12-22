@@ -58,7 +58,12 @@ public class App {
                     printBinaryform(solution);
                 }
             } else if (function.equals("divide")) {
-                System.out.println("Division " + valueA + " / " + valueB + " = " + calculator.division(valueA, valueB));
+                Double solutionDouble = calculator.division(valueA, valueB);
+                solution = solutionDouble.intValue();
+                System.out.println("Division " + valueA + " / " + valueB + " = " + solution);
+                if (solution > 0) {
+                    printBinaryform(solution);
+                }
             } else {
                 System.out.println("Please choose one of the given functions");
             }
