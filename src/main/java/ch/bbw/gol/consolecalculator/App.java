@@ -13,6 +13,7 @@ public class App {
             String function;
             int valueA = 0;
             int valueB = 0;
+            int solution = 0;
 
             System.out.println("Console Calculator");
             System.out.println("==================");
@@ -39,7 +40,11 @@ public class App {
             System.out.println("\n----CALCULATING----\n");
 
             if (function.equals("plus")) {
-                System.out.println("Summe " + valueA + " + " + valueB + " = " + calculator.addition(valueA, valueB));
+                solution = calculator.addition(valueA, valueB);
+                System.out.println("Summe " + valueA + " + " + valueB + " = " + solution);
+                if (solution > 0) {
+                    printBinaryform(solution);
+                }
             } else if (function.equals("minus")) {
                 System.out.println("Differenz " + valueA + " - " + valueB + " = " + calculator.subtraktion(valueA, valueB));
             } else if (function.equals("times")) {
