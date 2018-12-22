@@ -47,12 +47,16 @@ public class App {
                 }
             } else if (function.equals("minus")) {
                 solution = calculator.subtraktion(valueA, valueB);
-                System.out.println("Differenz " + valueA + " - " + valueB + " = " + calculator.subtraktion(valueA, valueB));
+                System.out.println("Differenz " + valueA + " - " + valueB + " = " + solution);
                 if (solution > 0) {
                     printBinaryform(solution);
                 }
             } else if (function.equals("times")) {
-                System.out.println("Multiplikation " + valueA + " * " + valueB + " = " + calculator.multiplicationTesting(valueA, valueB));
+                solution = calculator.multiplicationTesting(valueA, valueB);
+                System.out.println("Multiplikation " + valueA + " * " + valueB + " = " + solution);
+                if (solution > 0) {
+                    printBinaryform(solution);
+                }
             } else if (function.equals("divide")) {
                 System.out.println("Division " + valueA + " / " + valueB + " = " + calculator.division(valueA, valueB));
             } else {
