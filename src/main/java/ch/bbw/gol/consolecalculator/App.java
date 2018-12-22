@@ -11,6 +11,10 @@ public class App {
         System.out.println("==================");
         System.out.println();
 
+        System.out.println("What would you like to calculate?\n");
+        System.out.println("Plus, Minus, Times or Divide");
+        System.out.println("Please write the whole word as your answer:\n");
+
         valueA = 6;
         valueB = 2;
         System.out.println("Summe " + valueA + " + " + valueB + " = " + calculator.addition(valueA, valueB));
