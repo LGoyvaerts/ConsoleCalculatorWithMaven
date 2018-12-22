@@ -13,6 +13,7 @@ public class App {
             String function;
             int valueA = 0;
             int valueB = 0;
+            int solution = 0;
 
             System.out.println("Console Calculator");
             System.out.println("==================");
@@ -39,18 +40,52 @@ public class App {
             System.out.println("\n----CALCULATING----\n");
 
             if (function.equals("plus")) {
-                System.out.println("Summe " + valueA + " + " + valueB + " = " + calculator.addition(valueA, valueB));
+                solution = calculator.addition(valueA, valueB);
+                System.out.println("Summe " + valueA + " + " + valueB + " = " + solution);
+                if (solution > 0) {
+                    System.out.print("Your value in binary form: ");
+                    printBinaryform(solution);
+                }
             } else if (function.equals("minus")) {
-                System.out.println("Differenz " + valueA + " - " + valueB + " = " + calculator.subtraktion(valueA, valueB));
+                solution = calculator.subtraktion(valueA, valueB);
+                System.out.println("Differenz " + valueA + " - " + valueB + " = " + solution);
+                if (solution > 0) {
+                    System.out.print("Your value in binary form: ");
+                    printBinaryform(solution);
+                }
             } else if (function.equals("times")) {
-                System.out.println("Multiplikation " + valueA + " * " + valueB + " = " + calculator.multiplicationTesting(valueA, valueB));
+                solution = calculator.multiplicationTesting(valueA, valueB);
+                System.out.println("Multiplikation " + valueA + " * " + valueB + " = " + solution);
+                if (solution > 0) {
+                    System.out.print("Your value in binary form: ");
+                    printBinaryform(solution);
+                }
             } else if (function.equals("divide")) {
-                System.out.println("Division " + valueA + " / " + valueB + " = " + calculator.division(valueA, valueB));
+                Double solutionDouble = calculator.division(valueA, valueB);
+                solution = solutionDouble.intValue();
+                System.out.println("Division " + valueA + " / " + valueB + " = " + solution);
+                if (solution > 0) {
+                    System.out.print("Your value in binary form: ");
+                    printBinaryform(solution);
+                }
             } else {
                 System.out.println("Please choose one of the given functions");
             }
 
             System.out.println("\n==================\n");
         }
+    }
+
+    private static void printBinaryform(int number) {
+        int remainder;
+
+        if (number <= 1) {
+            System.out.print(number);
+            return; // KICK OUT OF THE RECURSION
+        }
+
+        remainder = number % 2;
+        printBinaryform(number >> 1);
+        System.out.print(remainder);
     }
 }
