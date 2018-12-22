@@ -53,4 +53,17 @@ public class App {
             System.out.println("\n==================\n");
         }
     }
+
+    private static void printBinaryform(int number) {
+        int remainder;
+
+        if (number <= 1) {
+            System.out.print(number);
+            return; // KICK OUT OF THE RECURSION
+        }
+
+        remainder = number % 2;
+        printBinaryform(number >> 1);
+        System.out.print(remainder);
+    }
 }
