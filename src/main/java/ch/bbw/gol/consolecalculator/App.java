@@ -46,7 +46,11 @@ public class App {
                     printBinaryform(solution);
                 }
             } else if (function.equals("minus")) {
+                solution = calculator.subtraktion(valueA, valueB);
                 System.out.println("Differenz " + valueA + " - " + valueB + " = " + calculator.subtraktion(valueA, valueB));
+                if (solution > 0) {
+                    printBinaryform(solution);
+                }
             } else if (function.equals("times")) {
                 System.out.println("Multiplikation " + valueA + " * " + valueB + " = " + calculator.multiplicationTesting(valueA, valueB));
             } else if (function.equals("divide")) {
