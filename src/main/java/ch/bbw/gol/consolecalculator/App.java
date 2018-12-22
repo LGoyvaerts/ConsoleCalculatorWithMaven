@@ -43,18 +43,21 @@ public class App {
                 solution = calculator.addition(valueA, valueB);
                 System.out.println("Summe " + valueA + " + " + valueB + " = " + solution);
                 if (solution > 0) {
+                    System.out.print("Your value in binary form: ");
                     printBinaryform(solution);
                 }
             } else if (function.equals("minus")) {
                 solution = calculator.subtraktion(valueA, valueB);
                 System.out.println("Differenz " + valueA + " - " + valueB + " = " + solution);
                 if (solution > 0) {
+                    System.out.print("Your value in binary form: ");
                     printBinaryform(solution);
                 }
             } else if (function.equals("times")) {
                 solution = calculator.multiplicationTesting(valueA, valueB);
                 System.out.println("Multiplikation " + valueA + " * " + valueB + " = " + solution);
                 if (solution > 0) {
+                    System.out.print("Your value in binary form: ");
                     printBinaryform(solution);
                 }
             } else if (function.equals("divide")) {
@@ -62,6 +65,7 @@ public class App {
                 solution = solutionDouble.intValue();
                 System.out.println("Division " + valueA + " / " + valueB + " = " + solution);
                 if (solution > 0) {
+                    System.out.print("Your value in binary form: ");
                     printBinaryform(solution);
                 }
             } else {
